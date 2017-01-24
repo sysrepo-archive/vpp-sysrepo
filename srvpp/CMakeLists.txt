@@ -31,3 +31,10 @@ if(ENABLE_TESTS)
         MESSAGE(WARNING "CMocka not found, tests are disabled.")
     endif(CMOCKA_FOUND)
 endif(ENABLE_TESTS)
+
+find_package(PkgConfig QUIET)
+if(PKG_CONFIG_FOUND)
+    # generate and install pkg-config file
+    configure_file("libsrvpp.pc.in" "libsrvpp.pc" @ONLY)
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libsrvpp.pc" DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
+endif()

@@ -452,7 +452,7 @@ interface_state_cb(const char *xpath, sr_val_t **values, size_t *values_cnt, voi
         /* currently the only supported interface types are propVirtual / ethernetCsmacd */
         sr_val_build_xpath(&values_arr[values_arr_cnt], "%s[name='%s']/type", xpath, if_details->interface_name);
         sr_val_set_str_data(&values_arr[values_arr_cnt], SR_IDENTITYREF_T,
-                strstr((char*)if_details->interface_name, "local") ? "propVirtual" : "ethernetCsmacd");
+                strstr((char*)if_details->interface_name, "local") ? "iana-if-type:propVirtual" : "iana-if-type:ethernetCsmacd");
         values_arr_cnt++;
 
         sr_val_build_xpath(&values_arr[values_arr_cnt], "%s[name='%s']/admin-status", xpath, if_details->interface_name);
