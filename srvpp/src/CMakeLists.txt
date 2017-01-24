@@ -13,6 +13,8 @@
 # limitations under the License.
 #
 
+include(GNUInstallDirs)
+
 # srvpp sources
 set(SRVPP_SOURCES
     srvpp_logger.c
