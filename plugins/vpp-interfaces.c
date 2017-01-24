@@ -572,6 +572,7 @@ sr_plugin_cleanup_cb(sr_session_ctx_t *session, void *private_ctx)
 /**
  * @brief Callback to be called by plugin daemon periodically, to check whether the plugin and managed app is healthy.
  */
+/*
 int
 sr_plugin_health_check_cb(sr_session_ctx_t *session, void *private_ctx)
 {
@@ -589,3 +590,4 @@ sr_plugin_health_check_cb(sr_session_ctx_t *session, void *private_ctx)
         return SR_ERR_OK;
     }
 }
+*/
