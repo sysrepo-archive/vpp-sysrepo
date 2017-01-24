@@ -18,7 +18,7 @@ project(sysrepo-vpp-plugins)
 
 find_package(PkgConfig)
 pkg_check_modules(SYSREPO REQUIRED libsysrepo)
-pkg_check_modules(SYSREPO REQUIRED libsrvpp)
+pkg_check_modules(SRVPP REQUIRED libsrvpp)
 
 # get sysrepo plugins directory from pkgconfig
 if (NOT SR_PLUGINS_DIR)
