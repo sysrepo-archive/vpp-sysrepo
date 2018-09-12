@@ -27,7 +27,7 @@ set(SRVPP_HEADERS
 )
 
 # libraries to link with
-set(LINK_LIBRARIES vlibmemoryclient vlibapi svm vppinfra pthread rt dl)
+set(LINK_LIBRARIES vlibmemoryclient svm vppinfra pthread rt dl)
 
 # build instructions
 add_library(srvpp SHARED ${SRVPP_SOURCES})
