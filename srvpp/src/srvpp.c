@@ -22,7 +22,7 @@
 #include "srvpp_logger.h"
 
 #define vl_api_version(n,v) static u32 vpe_api_version = (v);
-#include <vpp-api/vpe.api.h>
+#include <vpp/api/vpe.api.h>
 #undef vl_api_version
 
 #define SRVPP_RESPONSE_TIMEOUT 2 /**< Maximum time (in seconds) that a client waits for the response(s) to a request or dumprequest. */
